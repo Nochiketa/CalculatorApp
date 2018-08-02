@@ -118,45 +118,49 @@ public class MainActivity extends AppCompatActivity {
         buttonadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mnum1 = Float.parseFloat(textView.getText().toString());
-                textView.setText("");
                 operation = 1;
+                mnum1 = Float.parseFloat(textView.getText().toString());
+                exp ="";
+                textView.setText(exp);
             }
         });
 
         buttonsub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mnum1 = Float.parseFloat(textView.getText().toString());
-                textView.setText("");
                 operation = 2;
+                mnum1 = Float.parseFloat(textView.getText().toString());
+                exp = "";
+                textView.setText(exp);
             }
         });
 
         buttonmul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mnum1 = Float.parseFloat(textView.getText().toString());
-                textView.setText("");
                 operation = 3;
+                mnum1 = Float.parseFloat(textView.getText().toString());
+                exp = "";
+                textView.setText(exp);
             }
         });
 
         buttondiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mnum1 = Float.parseFloat(textView.getText().toString());
-                textView.setText("");
                 operation = 4;
+                mnum1 = Float.parseFloat(textView.getText().toString());
+                exp = "";
+                textView.setText(exp);
             }
         });
 
-        buttoncancel.setOnClickListener(new View.OnClickListener() {
+        /*buttoncancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 textView.setText("");
             }
-        });
+        });*/
 
         buttonequal.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -168,24 +172,21 @@ public class MainActivity extends AppCompatActivity {
                 {
                     case 1:
                         total = mnum1 + mnum2;
-                        operation = 0;
                         break;
                     case 2:
                         total = mnum1 - mnum2;
-                        operation = 0;
                         break;
                     case 3:
                         total = mnum1 * mnum2;
-                        operation = 0;
                         break;
                     case 4:
                         total = mnum1 / mnum2;
-                        operation = 0;
                         break;
                     default:
-                        textView.setText("Enter any nnumber");
+                        textView.setText("This is me");
 
                 }
+                exp = "";
                 textView.setText(String.valueOf(total));
             }
         });
